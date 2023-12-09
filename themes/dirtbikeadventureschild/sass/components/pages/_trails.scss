@@ -1,0 +1,189 @@
+.trails-hero-section {
+    // background-image: url(/wp-content/uploads/2022/08/trails-hero.jpg);
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-attachment: scroll;
+    // background-size: cover;
+
+    padding: 50px 0;
+    background-color: #F4F4F4;
+
+    .hero-text-con {
+        display: block;
+        margin: 0 auto;
+    
+        h1 {
+            line-height: 4rem;
+            letter-spacing: .2rem;
+            text-transform: uppercase;
+            font-size: 68px;
+            color: #181818;
+            margin: 0;
+
+            @media (max-width: 909px) { 
+                font-size: 58px;
+            }
+        }
+    
+        p {
+            color: #fff;
+            font-size: 16px;
+        }
+    }
+    
+}
+
+.trail-section {
+    padding: 40px 0;
+
+    h2 {
+        font-weight: 400;
+        font-size: 60px;
+        margin: 0;
+        line-height: 3rem;
+        color: #181818;
+    }
+}
+
+.post-con {
+    padding: 40px 0;
+    border-bottom: 1px solid #F4F4F4;
+
+    &:last-child {
+        border-bottom: none
+    }
+
+    .entry-meta {
+        a {
+            color: $color__primary;
+        }
+    }
+
+    
+    h2 {
+        font-weight: 400;
+        margin: 0;
+        line-height: 3rem;
+        font-size: 42px;
+        
+        a {
+            color: #181818;
+        }
+    }
+
+    .info-con {
+        .date {
+            padding-right: 10px;
+        }
+    }
+
+    .post-btn {
+        a {
+
+            text-align: center;
+            padding: 8px 21px;
+            background-color: #056839;
+            color: #fff;
+        }
+    }
+}
+
+.post-header {
+    background-color: $color__secondary;
+    padding: 40px 0;
+
+    color: #fff;
+
+    h1 {
+        margin: 0;
+        font-size: 42px;
+    }
+
+    a {
+        color: #056839;
+    }
+
+
+}
+
+
+.post-archive-header {
+    //background-color: $color__secondary;
+    //padding: 40px 0;
+
+    color: $color__secondary;
+
+    h1 {
+        margin: 0;
+        font-size: 42px;
+    }
+
+    a {
+        color: #056839;
+    }
+
+    h2 {
+        margin: 0;
+    }
+}
+
+.archive-content {
+    margin: 40px 0;
+}
+
+.post-nav {
+    a {
+        color: #056839;
+    }
+
+    .post-navigation {
+        padding: 30px 0;
+    }
+    
+}
+
+.cat-links {
+    a {
+        color: #056839
+    }
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-body {
+    padding: 40px 0;
+    border-bottom: 1px solid #F4F4F4;
+
+    &:last-child {
+        border-bottom: none
+    }
+
+    h2 {
+        font-weight: 400;
+        margin: 0;
+        line-height: 3rem;
+        font-size: 42px;
+
+        a {
+            color: #181818;
+        }
+        
+    }
+}
+
+.comments-link {
+    display: none;
+}
+
+.pagination {
+    margin-bottom: 20px;
+    font-size: 21px;
+    text-align: center;
+
+    a {
+        color: $color__primary;
+    }
+}

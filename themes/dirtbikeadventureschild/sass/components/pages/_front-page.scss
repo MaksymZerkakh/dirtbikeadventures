@@ -1,0 +1,258 @@
+.hero-section {
+    background-image: url(/wp-content/uploads/2022/08/main-hero-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    padding: 200px 0;
+
+    @media (max-width: 909px) { 
+        padding: 100px 0;
+    }
+
+    .hero-text-con {
+        display: block;
+        margin: 0 auto;
+    
+        h1 {
+            line-height: 4rem;
+            letter-spacing: .2rem;
+            text-transform: uppercase;
+            font-size: 68px;
+            color: #fff;
+            margin: 0;
+
+            @media (max-width: 909px) { 
+                font-size: 56px;
+                line-height: 3.5rem;
+            }
+        }
+    
+        p {
+            color: #fff;
+            font-size: 16px;
+        }
+    }
+    
+}
+
+
+.adventure-section {
+    background-color: #F4F4F4;
+    padding: 80px 0;
+
+    background-image: url(/wp-content/uploads/2022/08/Asset-4@144x-8-1.png);
+    background-repeat: no-repeat;
+
+    background-position: 80% 140%;
+    background-attachment: scroll;
+
+    @media (max-width: 909px) { 
+        background-position: right 115%;
+    }
+    
+    h2 {
+        font-weight: 400;
+        font-size: 52px;
+        margin: 0;
+        line-height: 3rem;
+        color: #181818;
+    }
+
+    img {
+        margin-bottom: -125px;
+
+        @media (max-width: 909px) { 
+            margin-bottom: 0;
+        }
+    }
+}
+
+.column-50 {
+    width: 50%;
+    padding: 0 20px;
+
+    @media (max-width: 909px) { 
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.padding-top-70 {
+    padding-top: 70px;
+
+    @media (max-width: 909px) { 
+        padding-top: 0px;
+    }
+}
+
+.btn-cta {
+    text-align: center;
+    padding: 8px 21px;
+    background-color: #056839;
+    letter-spacing: .5px;
+    margin-top: 20px;
+    font-size: 18px;
+
+    a {
+        color: #fff;
+    }
+}
+
+.ride-section {
+    padding: 100px 0 50px 0;
+    text-align: center;
+
+    @media (max-width: 909px) { 
+        padding: 100px 0;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 52px;
+        margin: 0;
+        line-height: 3rem;
+        color: #181818;
+    }
+}
+
+.justify-content {
+    justify-content: space-between;
+}
+
+.float-left {
+    float: left;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.desktop-gallery {
+    img {
+        padding: 20px;
+    }
+
+    @media (max-width: 909px) { 
+        display: none;
+    }
+}
+
+.mobile-text {
+    @media (min-width: 909px) {
+         display: none;
+    }
+}
+
+
+.gallery-img-one {
+    background-image: url(/wp-content/uploads/2022/08/ride-one.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+
+    height: 500px;
+    width: 100%;
+    margin: 20px;
+}
+
+.gallery-img-two {
+    background-image: url(/wp-content/uploads/2022/08/ride-two.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+
+    height: 500px;
+    width: 100%;
+    margin: 20px;
+}
+
+.gallery-img-three {
+    background-image: url(/wp-content/uploads/2022/08/ride-three.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+
+    height: 500px;
+    width: 100%;
+    margin: 20px;
+}
+
+
+
+.adventure-img {
+    background-image: url(/wp-content/uploads/2022/08/adventure.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+
+    height: 442px;
+    width: 100%;
+
+    margin-top: 20px;
+    margin-bottom: -120px;
+
+    @media (max-width: 909px) { 
+        display: none;
+    }
+}
+
+.ride-section {
+    background-image: url(/wp-content/uploads/2022/08/Intersection-3.png);
+    background-repeat: no-repeat;
+
+    background-position: -20% 5%;
+    background-attachment: scroll;
+
+    @media (max-width: 909px) { 
+        background-position: right 10%;
+        background-image: none;
+    }
+}
+
+
+button {
+    border: none;
+
+    a {
+        background-color: #056839;
+    }
+}
+
+.sub-heading {
+    font-size: 18px;
+
+
+    &::before {
+        content: "";
+        height: 5px;
+        width: 30px;
+        background-color: #056839;
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 3px;
+    }
+}
+
+.hr-element {
+    &::before {
+        content: "";
+        height: 5px;
+        width: 80px;
+        background-color: #056839;
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 20px;
+
+        @media (max-width: 909px) { 
+            display: none;
+        }
+    }
+
+}

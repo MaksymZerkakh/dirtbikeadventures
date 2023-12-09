@@ -1,0 +1,19 @@
+body {
+  background: $color__background-body; // Fallback for when there is no custom background color defined.
+}
+
+.nav-background{
+  background-color: #181818;
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.617924em;
+
+}
+
+p {
+  font-family: $font__body;
+}

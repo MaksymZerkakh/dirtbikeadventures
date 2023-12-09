@@ -1,0 +1,138 @@
+.faq-hero-section {
+    // background-image: url(/wp-content/uploads/2022/08/faq-hero.jpg);
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-attachment: scroll;
+    // background-size: cover;
+
+    padding: 50px 0;
+
+    padding: 50px 0;
+    background-color: #F4F4F4;
+
+    .hero-text-con {
+        display: block;
+        margin: 0 auto;
+    
+        h1 {
+            line-height: 4rem;
+            letter-spacing: .2rem;
+            text-transform: uppercase;
+            font-size: 68px;
+            color: #181818;
+            margin: 0;
+
+            @media (max-width: 909px) { 
+              font-size: 58px;
+          }
+        }
+    
+        p {
+            color: #fff;
+            font-size: 16px;
+        }
+    }
+    
+}
+
+.faq-section {
+    padding: 60px 0;
+
+    h2 {
+        font-weight: 400;
+        font-size: 52px;
+        margin: 0 0 20px 0;
+        line-height: 3rem;
+        color: #181818;
+    }
+}
+
+
+
+.accordion {
+    .accordion-item {
+      border-bottom: 1px solid gray;
+
+    }
+    button {
+      position: relative;
+      display: block;
+      text-align: left;
+      width: 100%;
+      padding: 1em 0;
+      color: #181818;
+      font-size: 1.15rem;
+      font-weight: 400;
+      border: none;
+      background: none;
+      outline: none;
+      &:hover, &:focus {
+        cursor: pointer;
+        color: $color__primary;
+        &::after {
+          cursor: pointer;
+          color: $color__primary;
+          border: 1px solid #181818;
+        }
+      }
+      .accordion-title {
+        padding: 1em 1.5em 1em 0;
+      }
+      .icon {
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        border: 1px solid;
+        border-radius: 22px;
+        &::before {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 9px;
+          left: 5px;
+          width: 10px;
+          height: 2px;
+          background: currentColor;
+        }
+        &::after {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 5px;
+          left: 9px;
+          width: 2px;
+          height: 10px;
+          background: currentColor;
+        }
+      }
+    }
+    button[aria-expanded='true'] {
+      color: $color__primary;
+      .icon {
+        &::after {
+          width: 0;
+        }
+      }
+      + .accordion-content {
+        opacity: 1;
+        max-height: 9em;
+        transition: all 200ms linear;
+        will-change: opacity, max-height;
+      }
+    }
+    .accordion-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 200ms linear, max-height 200ms linear;
+      will-change: opacity, max-height;
+      p {
+        font-size: 1rem;
+        font-weight: 300;
+        //margin: 2em 0;
+      }
+    }
+  }

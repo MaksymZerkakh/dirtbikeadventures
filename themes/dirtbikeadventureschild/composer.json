@@ -1,0 +1,13 @@
+{
+    "name": "dba/dba",
+    "description": "dba",
+    "autoload": {
+        "psr-4": {
+            "Sscw\\Sscw\\": "src/"
+        }
+    },
+    "require": {
+        "nikic/php-parser": "^4.15",
+        "mrclay/minify": "^3.0"
+    }    
+}

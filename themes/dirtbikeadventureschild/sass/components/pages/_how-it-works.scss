@@ -1,0 +1,62 @@
+.how-it-works-hero-section {
+    // background-image: url(/wp-content/uploads/2022/08/how-it-works.jpg);
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-attachment: scroll;
+    // background-size: cover;
+
+    padding: 50px 0;
+    background-color: #F4F4F4;
+
+    .hero-text-con {
+        display: block;
+        margin: 0 auto;
+    
+        h1 {
+            line-height: 4rem;
+            letter-spacing: .2rem;
+            text-transform: uppercase;
+            font-size: 68px;
+            color: #181818;
+            margin: 0;
+
+            @media (max-width: 909px) { 
+                font-size: 58px;
+            }
+            
+        }
+    
+        p {
+            color: #fff;
+            font-size: 16px;
+        }
+    }
+    
+}
+
+.how-it-works-section {
+    padding: 60px 0;
+
+    h2 {
+        font-weight: 400;
+        font-size: 52px;
+        margin: 0;
+        line-height: 3rem;
+        color: #181818;
+    }
+
+    h3 {
+        font-size: 40px;
+        margin: 0;
+        color: #181818;
+        font-weight: 400;
+    }
+}
+
+.green-icon {
+    color: $color__primary;
+}
+
+.fa-li {
+    margin-top: 5px;
+}
