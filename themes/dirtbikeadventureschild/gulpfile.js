@@ -37,10 +37,10 @@ gulp.task('autoprefixer', () => {
         "not dead",
     ];
 
-    return gulp.src('./style.css')
+    return gulp.src(['./style.css', './tailwind_output.css'])
         .pipe(sourcemaps.init())
         .pipe(postcss([autoprefixer({ overrideBrowserslist: browserslistConfig })]))
         .pipe(sourcemaps.write('.'))
-        .pipe(rename('style.pre.css'))
+        .pipe(rename({ suffix: '.pre' })) // Rename the files if desired
         .pipe(gulp.dest('./dist/css/'));
 });

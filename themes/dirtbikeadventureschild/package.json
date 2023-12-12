@@ -34,6 +34,7 @@
     "node-sass": "^9.0",
     "pngquant-bin": "^6.0.1",
     "rtlcss": "^3.5.0",
+    "tailwindcss": "^3.3.6",
     "through2": "^4.0.2",
     "uglify-php": "^1.0.7"
   },
@@ -51,13 +52,15 @@
     "map": false
   },
   "scripts": {
-    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+    "starttailwind": "npx tailwindcss -i ./tailwind.css -o ./tailwind_output.css --watch",
     "watch:scss": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "watch:js": "node ./node_modules/gulp/bin/gulp.js devWatch",
     "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "prefix:css": "gulp autoprefixer",
     "minify:css": "css-minify --file ./dist/css/style.pre.css -o ./dist/css/ && mv ./dist/css/style.pre.min.css ./dist/css/style.min.css",
-    "build:css": "npm run prefix:css && npm run minify:css && node update-version.js",
+    "minify:tailwind": "css-minify --file ./dist/css/tailwind_output.pre.css -o ./dist/css/ && mv ./dist/css/tailwind_output.pre.min.css ./dist/css/tailwind_output.min.css",
+    "build:css": "npm run prefix:css && npm run minify:css && npm run minify:tailwind && node update-version.js",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
     "bundle:js": "node ./node_modules/gulp/bin/gulp.js bundleJs",
     "obfuscate:js": "javascript-obfuscator dist/js/script.min.js --output dist/js/script.min.obf.js",
