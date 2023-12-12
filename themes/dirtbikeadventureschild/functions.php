@@ -22,6 +22,7 @@
 function child_theme_enqueue_styles() {
     wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/dist/css/style.min.css', array(), '1.0.01'); // Use this for production
     wp_enqueue_style('tailwind-style', get_stylesheet_directory_uri() . '/dist/css/tailwind_output.min.css', array(), '1.0.01'); // Use this for production
-    // wp_enqueue_style( 'child-style', get_stylesheet_uri(), array(), '3.0.25' ); //Use this only for development
+    // wp_enqueue_style( 'child-style', get_stylesheet_uri(), array(), '1.0.01' ); //Use this only for development
+    // wp_enqueue_style( 'child-style', get_stylesheet_uri().'tailwind_output.css', array(), '1.0.01' ); //Use this only for development
 }
 add_action( 'wp_enqueue_scripts', 'child_theme_enqueue_styles' );
