@@ -8,12 +8,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
-
-      - name: Deploy to Bluehost
+      - name: GitHub Action Deploy to Bluehost
         uses: maksymzerkakh/deploy-bluehost@master
         with:
         # Deploy to Bluehost
