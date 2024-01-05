@@ -28,5 +28,6 @@ jobs:
           rsync -avz --delete --exclude='node_modules' --exclude='.git' ./ zeiopymy@50.87.222.94:~/public_html/wp-content/
           ssh zeiopymy@50.87.222.94 "cd ~/public_html/wp-content/ && wp core update && wp plugin update --all && wp theme update --all && wp cache flush"
 
+          # Clean up SSH
         env:
           BH_SSH_KEY_PRIVATE: ${{ secrets.BH_SSH_KEY_PRIVATE }}
