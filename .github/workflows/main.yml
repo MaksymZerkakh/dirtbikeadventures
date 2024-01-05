@@ -1,0 +1,23 @@
+name: Deploy to Bluehost
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+      - uses: actions/checkout@v3
+        with:
+          node-version: 16
+
+      - name: Deploy to Bluehost
+        uses: maksymzerkakh/deploy-bluehost@master
+        with:
+        # Deploy to Bluehost
+          BH_SSH_KEY_PRIVATE: ${{ secrets.BH_SSH_KEY_PRIVATE }}
+          REMOTE_PATH: "~/public_html/wp-content/"
+          PHP_LINT: TRUE
+          CACHE_CLEAR: TRUE
