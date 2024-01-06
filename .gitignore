@@ -72,7 +72,7 @@ wp-config.php
 #/wp-content/plugins
 
 # Ignore all plugins
-/plugins/*
+# /plugins/*
 
 # All themes
 #
