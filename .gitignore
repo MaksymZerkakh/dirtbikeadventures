@@ -57,7 +57,7 @@ composer.lock
 wp-config.php
 
 # Uploads
-/uploads/
+# /uploads/
 
 # Log files
 *.log
