@@ -1,4 +1,5 @@
 name: Deploy to Bluehost WordPress
+
 on:
   push:
     branches:
@@ -7,27 +8,30 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
           node-version: 16
-          
-      - name: Deploy to Bluehost
+
+      - name: Set up SSH
         run: |
-          # Set up SSH
           mkdir -p ~/.ssh
-          echo "$BH_SSH_KEY_PRIVATE" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          echo "$BH_SSH_KEY_PRIVATE" > ~/.ssh/bh_mzerkakh
+          chmod 600 ~/.ssh/bh_mzerkakh
           ssh-keyscan -H 50.87.222.94 >> ~/.ssh/known_hosts
 
-          # Deployment commands
-          rsync -avz --delete --exclude='node_modules' --exclude='.git' ./ zeiopymy@50.87.222.94:~/public_html/wp-content/
-          ssh zeiopymy@50.87.222.94 "cd ~/public_html/wp-content/ && wp core update && wp plugin update --all && wp theme update --all && wp cache flush"
+      - name: Test SSH Connection
+        run: ssh -i ~/.ssh/bh_mzerkakh zeiopymy@50.87.222.94 "echo 'SSH connection successful'"
 
-       
-        env:
-          BH_SSH_KEY_PRIVATE: ${{ secrets.BH_SSH_KEY_PRIVATE }}
+      - name: Deploy to Bluehost
+        run: |
+          rsync -avz --delete --exclude='node_modules' --exclude='.git' ./ zeiopymy@50.87.222.94:~/public_html/wp-content/
+          ssh -i ~/.ssh/bh_mzerkakh zeiopymy@50.87.222.94 "cd ~/public_html/wp-content/ && wp core update && wp plugin update --all && wp theme update --all && wp cache flush"
+
+    env:
+      BH_SSH_KEY_PRIVATE: ${{ secrets.BH_SSH_KEY_PRIVATE }}
