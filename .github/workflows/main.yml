@@ -30,7 +30,7 @@ jobs:
 
       - name: Deploy to Bluehost
         run: |
-          rsync -avz --delete --exclude='node_modules' --exclude='.git' ./ zeiopymy@50.87.222.94:~/public_html/wp-content/
+          rsync -avz -e "ssh -i ~/.ssh/bh_demo -o 'StrictHostKeyChecking=accept-new'" --delete --exclude='node_modules' --exclude='.git' ./ zeiopymy@50.87.222.94:~/public_html/wp-content/
           ssh -i ~/.ssh/bh_demo zeiopymy@50.87.222.94 "cd ~/public_html/wp-content/ && wp core update && wp plugin update --all && wp theme update --all && wp cache flush"
 #Test
     env:
