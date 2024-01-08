@@ -28,8 +28,7 @@ get_header();
 
 <div class="rentals-section">
     <div class="row wrapper ">
-        <!-- FareHarbor item grid of flow #812372 -->
-        <script src="https://fareharbor.com/embeds/script/items/updirtbikeadventures/?full-items=yes&fallback=simple&flow=812372"></script>
+        <!-- iFrame Coming Soon -->
     </div>
 </div>
 
